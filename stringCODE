@@ -1,0 +1,45 @@
+
+write a Java Program to check given String is well formed or not
+****************************************************************
+
+import java.util.Stack;
+
+public class Main
+{
+	public static void main(String[] args) {
+		String str="{([])}";
+		Stack<Character> ob=new Stack<>();
+		for(int i=0; i<str.length(); i++)
+		{
+		    char ch=str.charAt(i);
+		
+		if(ob.empty())
+		{
+		    ob.push(ch);
+		}
+		else if(ch== '{' || ch== '(' || ch== '[')
+		{
+		    ob.push(ch);
+		}
+		else if(ch=='}' && ob.peek()=='}')
+		{
+		    ob.pop();
+		}
+		else if(ch==']' && ob.peek()==']')
+		{
+		    ob.pop();
+		}
+		else if (ch==')' && ob.peek()==')')
+		{
+		    ob.pop();
+		}
+		}
+		if(ob.empty())
+		{
+		    System.out.println("this is well form ");
+		}
+		else{
+		    System.out.println("this is not well form");
+		}
+	}
+}
