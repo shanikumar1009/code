@@ -1,0 +1,29 @@
+
+
+paradram code
+***************************
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner ob=new Scanner(System.in);
+	    System.out.println("Enter the first String");
+	    String str =ob.nextLine();
+	    System.out.println("Enter the second String");
+	    String str1=ob.nextLine();
+	     char [] str3=str.toCharArray();
+	     char[] str4=str1.toCharArray();
+	     Arrays.sort(str3);
+	     Arrays.sort(str4);
+	     boolean result=Arrays.equals(str3,str4);
+	     if(result==true)
+	     {
+	         System.out.println("yes");
+	     }
+	     else{
+	         System.out.println("no");
+	     }
+	}
+}
