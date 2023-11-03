@@ -1,0 +1,27 @@
+Write A Java Program To Print Even Length Words In A String
+*******************************************************************************
+import java.util.*;
+public class Main
+{
+    public static void even(String str)
+    {
+        for(String st:str.split(" "))
+        {
+            if(st.length()%2==0)
+            {
+                System.out.println("even is:-",st);
+            }
+            
+            else{
+                System.out.println("not even in String");
+            }
+        }
+    }
+	public static void main(String[] args) {
+	    Scanner ob=new Scanner(System.in);
+	    System.out.println("Enter the any String ");
+	    String str=ob.nextLine();
+	    even();
+	    
+	}
+}
